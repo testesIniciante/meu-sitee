@@ -5,6 +5,32 @@
   <title>Breaking Bad</title>
 
   <style>
+    <script>
+  // função para falar o texto
+  function falarTexto(texto) {
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR'; // define o idioma para português
+    window.speechSynthesis.speak(fala);
+  }
+
+  // adiciona os eventos de click
+  document.addEventListener('DOMContentLoaded', () => {
+    // título principal
+    const titulo = document.querySelector('h1')
+    if (titulo) {
+      titulo.style.cursor = 'pointer';
+      titulo.addEventListener('click', () => falarTexto('Título principal: Breaking Bad'));
+    }
+
+    // todos os subtítulos (h3) — como Walter White e Jesse Pinkman
+    const subtitulos = document.querySelectorAll('h3')
+    subtitulos.forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => falarTexto(el.textContent));
+    });
+  });
+</script>
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
