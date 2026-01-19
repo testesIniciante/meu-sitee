@@ -5,6 +5,28 @@
   <title>Breaking Bad</title>
 
   <style>
+    <script>
+  function falarTexto(texto) {
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    window.speechSynthesis.speak(fala);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const titulo = document.querySelector('h1');
+    if (titulo) {
+      titulo.style.cursor = 'pointer';
+      titulo.addEventListener('click', () => falarTexto('Título principal: Breaking Bad'));
+    }
+
+    const subtitulos = document.querySelectorAll('h3');
+    subtitulos.forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => falarTexto(el.textContent));
+    });
+  });
+</script>
+
 
     body {
       margin: 0;
