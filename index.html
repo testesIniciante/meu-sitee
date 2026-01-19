@@ -2,21 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Site</title>
+  <title>Breaking Bad</title>
 
   <style>
-   background: linear-gradient(120deg, #1e1e2f, #3a3a6a);
-    .card {
-      background: rgba(0,0,0,0.4);
-      padding: 40px;
-      border-radius: 15px;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #0f3d2e, #1f7a4d);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      padding: 40px 20px;
     }
 
     h1 {
+      font-size: 40px;
       margin-bottom: 10px;
-      font-size: 36px;
     }
 
     p {
@@ -24,30 +28,70 @@
       opacity: 0.9;
     }
 
-    button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #ff6a00;
-      color: white;
+    .galeria {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 30px;
     }
 
-    button:hover {
-      background: #ff8533;
+    .card {
+      background: rgba(0,0,0,0.4);
+      border-radius: 15px;
+      width: 280px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card div {
+      padding: 15px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.7;
     }
   </style>
 
 </head>
 <body>
 
-  <div class="card">
-    <h1>Meu site 🚀</h1>
-    <p>Agora ele está mais bonito</p>
-    <button>Clique aqui</button>
-  </div>
+  <header>
+    <h1>Breaking Bad 🧪</h1>
+    <p>Uma das melhores séries de todos os tempos</p>
+  </header>
+
+  <section class="galeria">
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/61/Breaking_Bad_title_card.png">
+      <div>Breaking Bad</div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c6/Walter_White_S5B.png">
+      <div>Walter White</div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/77/Jesse_Pinkman_S5B.png">
+      <div>Jesse Pinkman</div>
+    </div>
+
+  </section>
+
+  <footer>
+    Site criado por você • GitHub Pages
+  </footer>
 
 </body>
 </html>
